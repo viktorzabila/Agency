@@ -1,0 +1,141 @@
+.header {
+    
+    &-menu {
+        display: flex;
+        justify-content: center;
+        background: #313030;
+        margin-bottom: 110px;
+
+        @include laptops {
+            margin-bottom: 90px;
+        }
+
+        @include tablets {
+            margin-bottom: 60px;
+        }
+
+        @include phones {
+            margin-bottom: 20px;
+        }
+
+        &__list {
+            list-style-type: none;
+            text-transform: uppercase;
+            font-size: 14px;
+            font-family: "$font-2";
+            margin-right: 60px;
+            padding-top: 45px;
+            padding-bottom: 35px;
+            &:last-child {
+                margin-right: 0;
+            }
+            @include tablets {
+                margin-right: 30px;
+            }
+
+            @include phones {
+                font-size: 9px;
+                padding-top: 28px;
+                padding-bottom: 23px;
+            }
+            &--hover {
+                &:hover {
+                    background-color: #ff3f40;
+                    transition: 0.5s;
+                    padding: 45px 25px;
+                    @include phones {
+                        padding: 28px 15px;
+                    }
+                }
+            } 
+            
+        }
+
+        &__link {
+            transition: 300ms;
+            text-decoration: none;
+            color: #fff;
+            &:hover, &:focus {
+                color: orange;
+              }
+        }
+    }
+}
+
+
+
+.header-main {
+    display: flex;
+    justify-content: space-between;
+    @include tablets {
+        justify-content: center;
+        flex-wrap: wrap;
+
+    }
+    @include phones {
+        margin-bottom: 30px;
+    }
+
+    &-first-part {
+        display: flex;
+        flex-direction: column;
+        flex: 0 1 50%;
+
+        &__title {
+            font-family: "$font-3";
+            font-size: 60px;
+            margin-bottom: 15px;
+            @include laptops {
+                font-size: 42px;
+            }
+            @include tablets {
+                font-size: 32px;
+            }
+            @include phones {
+                font-size: 24px;
+            }
+        }
+
+        &__text {
+            max-width: 510px;
+            font-size: 16px;
+            color: #a5a2a2;
+            font-family: "$font-1";
+            margin-bottom: 60px;
+            @include laptops {
+                font-size: 14px;
+                max-width: 400px;
+                margin-bottom: 30px;
+            }
+            @include tablets {
+                max-width: 300px;
+                font-size: 12px;
+            }
+        }
+    }
+    
+    &-second-part {
+        flex: 0 1 50%;
+        margin-bottom: 110px;
+
+        @include tablets {
+            margin-bottom: 50px;
+        }
+        @include phones {
+            margin-bottom: 30px;
+        }
+
+        &__video {
+            width: 100%;
+            height: auto;
+            max-height: 100%;
+            @include tablets {
+                padding-top: 30px;
+            }
+            @include phones {
+                width: 250px;
+            }
+          }
+    }
+    
+}

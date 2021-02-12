@@ -1,0 +1,120 @@
+.avatar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 110px;
+    @include laptops {
+        justify-content: center;
+    }
+
+    &-img {
+        @include laptops {
+            display: none;
+        }
+        &__el {
+            width: 100%;
+            height: auto;
+            max-width: 320px;
+        }
+    }
+
+    &-content {
+        display: flex;
+        flex-direction: column;
+
+        &-first-part {
+            display: flex;
+            flex-direction: column;
+
+            &__title {
+                font-size: 30px;
+                font-family: "$font-4";
+                text-transform: uppercase;
+                margin-bottom: 25px;
+                @include tablets {
+                    font-size: 24px;
+                }
+                @include phones {
+                    font-size: 18px;
+                }
+            }
+    
+            &__text {
+                font-size: 16px;
+                font-family: "$font-1";
+                color: #7c7c7c;
+                margin-bottom: 40px;
+                max-width: 630px;
+                @include tablets {
+                    font-size: 14px;
+                    max-width: 500px;
+                }
+                @include phones {
+                    font-size: 12px;
+                }
+            }
+
+            &__social {
+                display: flex;
+                &__link {
+                    list-style-type: none;
+                    margin-right: 30px;
+                    font-family: "$font-5";
+                    margin-bottom: 70px;
+                    &:last-child {
+                        margin-right: 0px;
+                    }
+                }
+
+                &__list {
+                    color: #929292;
+                }
+            }
+        }
+
+        &-second-part {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+    
+            &__img {
+                margin-right: 15px;
+                &--relative {
+                    position: relative;
+                }
+                
+                &:last-child {
+                    margin-right: 0px;
+                    @include tablets {
+                        margin-right: 15px;
+                    }
+                    @include phones {
+                        margin-right: 15px;
+                    }
+                }
+                &-text {
+                    position: absolute;
+                    top: 185px;
+                    display: inline-flex;
+                    justify-content: center;
+                    text-transform: uppercase;
+                    align-items: center;
+                    left: 0;
+                    width: 100%;
+                    background: #7a786e;
+                    color: #fff;
+                    height: 30px;
+                }
+                &__el {
+                    width: 100%;
+                    height: auto;
+                    max-width: 200px;
+                }
+            }
+        }
+        @include tablets {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+}

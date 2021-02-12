@@ -1,0 +1,44 @@
+.wrapper-footer {
+    background-color: #313030;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    @include phones {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    &__text {
+        font-size: 16px;
+        font-family: "$font-1";
+        color: #706f6f;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        @include tablets {
+            font-size: 14px;
+        }
+        @include phones {
+            font-size: 12px;
+            padding-top: 30px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__social {
+
+        display: flex;
+        @include phones {
+            display: inline-flex;
+        }
+        &--el {
+            padding-top: 50px;
+            margin-right: 15px;
+            margin-bottom: 35px;
+            &:last-child {
+                margin-right: 0px;
+            }
+        }
+    }
+}

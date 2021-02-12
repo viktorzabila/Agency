@@ -1,0 +1,143 @@
+.content {
+
+    &-intro {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+
+        &--start {
+            display: flex;
+            flex-direction: column;
+
+            &--hr {
+                border-color: #ff2d2d;
+                margin-left: 0px;
+                margin-right: auto;
+                width: 135px;
+
+                &-bottom {
+                    margin-bottom: 70px;
+                }
+            }
+        }
+
+        &__title {
+            font-size: 42px;
+            text-transform: uppercase;
+            color: #333333;
+            font-family: "$font-2";
+            max-width: 420px;
+            margin-bottom: 30px;
+            @include tablets {
+                font-size: 32px;
+                max-width: 100%;
+                margin-bottom: 20px;
+            }
+            @include phones {
+                margin-bottom: 15px;
+                font-size: 24px;
+            }
+        }
+
+        &__text {
+            font-size: 16px;
+            line-height: 28px;
+            max-width: 510px;
+            color: #ababab;
+            margin-bottom: 30px;
+            font-family: "$font-1";
+            @include tablets {
+                font-size: 14px;
+                max-width: 400px;
+                margin-bottom: 20px;
+            }
+            @include phones {
+                font-size: 12px;
+            }
+        }
+
+        &--hr {
+            width: 135px;
+            background: #ff2d2d;
+            margin-bottom: 85px;
+            @include tablets {
+                margin-bottom: 55px;
+            }
+
+            @include phones {
+                margin-bottom: 25px;
+            }
+        }
+    }
+
+    &-menu {
+        display: flex;
+        justify-content: center;
+
+        &__list {
+            text-transform: uppercase;
+            font-family: "$font-4";
+            list-style-type: none;
+            margin-bottom: 65px;
+            @include tablets {
+                margin-bottom: 30px;
+                font-size: 12px;
+            }
+            @include phones {
+                font-size: 10px;
+            }
+
+            &__link {
+                color: #4c4c4c;
+                margin-right: 55px;
+                @include tablets {
+                    margin-right: 25px;
+                }
+                &--right {
+                    margin-right: 0px;
+                    color: #4c4c4c;
+                }
+            }
+            &--hover {
+                &:hover {
+                    color: #ff3f40;
+                    transition: 0.5s;
+                }
+            } 
+        }
+            
+        
+    }
+
+    &-blocks {
+        display: flex;
+        flex-wrap: wrap;
+        @include laptops {
+            justify-content: center;
+        }
+        
+        &__el {
+            margin-right: 15px;
+            margin-bottom: 15px;
+            width: 100%;
+            height: auto;
+            max-width: 290px;
+        
+            &--right {
+                margin-right: 0px;
+
+                @include laptops {
+                    margin-right: 15px;
+                }
+            }
+
+            &__img {
+                width: 100%;
+                height: auto;
+                max-width: 290px;
+            }
+        }
+    }
+}

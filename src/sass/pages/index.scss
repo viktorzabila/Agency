@@ -1,0 +1,43 @@
+.wrapper {
+    max-width: 1580px;
+    margin: 0 auto;
+}
+
+.wrapper-header {
+    background-color: #f6f2f2;
+    padding: 0px;
+    margin: 0 auto;
+}
+
+.container {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    @include tablets {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    @include phones {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+}
+
+.container-avatar{
+    max-width: 1250px;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+
+
+
+
+
+
+
+
